@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my website</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+	*{
+		margin: 0px;padding: 0px;font-family: sans-serif;
+	}
+	nav{
+		width: 100%;height: 80px;background-color:#222323;color: #fff;position: fixed;z-index: 100;
+	}
+	nav ul{
+		list-style: none;text-align: right;
+	}
+	nav ul li{
+		display: inline-block;text-align:center;height: 80px;line-height: 80px;width: 130px;position: relative;font-size: 10pt;text-transform: uppercase; 
+	}
+	nav ul li a{
+		text-decoration: none;color: #fff;display: block;
+	}
+	nav ul li a:hover::before{
+		content: '';
+		border:20px solid #0008F8;;
+		position: absolute;
+		left:0px; top:0px;right: 0px; 
+		border-color:  transparent transparent #00D8F8  transparent;  transform:rotate(180deg);
+    }
+	nav ul li a:hover::after{
+		content: '';
+		border:20px solid #0008F8;;
+		position: absolute;
+		left:0px; bottom:0px; right:0px; 
+		border-color:#00D8F8 transparent transparent transparent;   transform:rotate(180deg);
+
+		
+	}	
+	nav h3{
+		height: 80px;line-height: 80px;margin-left: 20px;float: left;font-size: 22pt;text-shadow: 1px 1px 5px #000;
+	
+	}
+	nav h3 span:first-child{
+		color: #00D8F8;border-top: 4px solid #00D8F8;font-size: 15pt;
+	}
+
+	nav h3 span:last-child{
+		border-bottom: 4px solid #fff;font-size: 15pt;
+	}		
+	.home{
+		width: 100%;height:600px;background-image: url("image/pexels.jpg"); background-size: 100% auto;padding-top: 60px;background-position: 0pt 55pt;
+	}
+	.home div{
+
+		width: 450px;height: 200px;position: absolute;top: 0px;left: 0px;right: 0px;bottom: 0px;margin: auto;text-align: center;color: #fff;text-shadow: 1px 1px 5px #000;line-height: 1.5;
+	}
+	.about{
+		width: 100%;height:550px;padding-top: 90px;
+	}
+	.about h2{
+		height: 80px;text-align: center;line-height: 80px;font-size: 20pt;text-transform: uppercase;
+	}
+	.home div h1{
+	  font-size: 30pt	
+   }
+   .home div h2{
+	  font-size: 18pt;letter-spacing: 6px	
+   }
+   .about div{
+   	width: 90%;margin:auto; text-align: justify;line-height: 1.8;box-shadow: 0px 0px 10px #222;padding: 20px;
+   }
+   .about div img{
+   	width: 450px;border: 5px solid #fff;float: left;margin-right: 20px
+   }
+  .portfolio h3{
+  	height: 80px;text-align: center;line-height: 80px;font-size: 20pt;text-transform: uppercase;
+   }
+	.portfolio{
+		width: 100%;height: 500px;padding-top: 90px;
+	}
+	.portfolio .portfolio-row{
+		width:95%;margin: auto;height: 450px;display: flex;text-align: center; 
+	}
+	.portfolio .portfolio-row .portfolio-item{
+		width:30%;margin: auto;height: 400px;box-shadow:0px 0px 5px rgba(0,0,0,0.5);transition: background-color 1s linear;bottom: 20px;
+    }
+	.portfolio .portfolio-row .portfolio-item img{
+		width:90%;margin: auto;height: 230px;padding-top: 20px;
+    }
+   
+    .portfolio .portfolio-row .portfolio-item:hover{
+	 	background-color: #222;color#fff;
+	 }
+    .contact h3{
+    	height: 80px;text-align: center;line-height: 80px;font-size: 20pt;text-transform: uppercase;
+   }
+     
+	.contact{
+		padding-top: 3700px;background-color/*:#f3f3f3*/;background-position: 0px 90px;background-size: 100%;background-repeat: no-repeat;
+	}
+	.contact-row{
+		width: 100%;height: 480px;display:flex; 
+	}
+	.contact-map{
+		width: 600px;height: 400px;border:5px solid #ccc;margin-left: 40px;
+	}
+	.contact-form{
+		width: 400px;height: 400px;margin-left:80px;
+	}
+	
+	.contact-form table{
+		width: 100%;height: 400px;margin-left: 80px;text-align: center;
+	}
+    
+	.contact-form table tr:first-child{
+		height: 40px;margin: 10px 0px;border: 1px solid #222;font-size: 14pt;text-transform: uppercase;background-color: #222323;color: #fff;border-radius: 50px; 
+	}
+	
+	.contact-form table tr td input{
+		width: 100%;height: 40px;margin: 5px 0px;border: 1px  solid #222;/*border-radius: 40px;*/
+	}
+   .contact-form table tr td textarea{
+		width: 100%;height: 100px;margin: 10px 0px;border: 0.5px  solid #222;
+	}
+   .contact-form table tr td input[type='submit']{
+		width: 60%;height: 40px;margin: 10px 0px;background-color: #00D8F8;color: #fff;text-align: center;border-radius: 50px;
+	
+	}
+	footer{
+		width: 100%;height: 230px;line-height: 60px;text-align: center;background-color:#222;color: #ccc;font-size: 12pt; 
+	
+	}
+	footer h1{
+		text-decoration: underline;
+	}
+	.button{  
+	width: 100%;
+	height: 100px;
+}
+#myBtn{
+	display: none; 
+    position: fixed; 
+    bottom: 40px; 
+    right: 50px; 
+    z-index: 99; 
+    border: none; 
+    outline: none;
+    background-color: #00D8F8; 
+    color: white; 
+    cursor: pointer;
+    padding: 15px; 
+    border-radius: 10px;
+    font-size: 18px; 
+}
+#myBtn:hover {
+    background-color: #555;
+}
+.portfolio h4{
+  	height: 80px;text-align: center;line-height: 80px;font-size: 15pt;
+   }
+</style>
+</head>
+<body>
+	<nav>
+<ul>
+	<h3><span> PORTFOLIO</span> <span>WEBSITE</span></h3>
+	<li><a href="#home">Home</a></li>
+	<li><a href="#about">About me</a></li>
+	<li><a href="#portfolio">Portfolio</a></li>
+	<li><a href="#contact">contact</a></li>
+</ul>
+</nav>
+<section class="home" id="home">
+	<div>
+		<h1>EVE ONGOROH</h1>
+		<H2>Graphic and web designer</H2>
+	</div>
+</section>
+<section class="about" id="about">
+
+<div>
+	<h2>About me</h2>
+<img src="image/_20181020_153120.jpg">
+A cartoon shows a bearded man with a red bow tie holding numerous items. He holds the hat from Dr. Seuss's "The Cat in the Hat" and balances a fishbowl on his left index finger.
+Example of a modern cartoon. The text was excerpted by cartoonist Greg Williams from the Wikipedia article on Dr. Seuss
+A cartoon is a type of illustration, possibly animated, typically in a non-realistic or semi-realistic style. The specific meaning has evolved over time, but the modern usage usually refers to either: an image or series of images intended for satire, caricature, or humor; or a motion picture that relies on a sequence of illustrations for its animation. Someone who creates cartoons in the first sense is called a cartoonist,[1] and in the second sense they are usually called an animator.
+A cartoon shows a bearded man with a red bow tie holding numerous items. He holds the hat from Dr. Seuss's "The Cat in the Hat" and balances a fishbowl on his left index finger.<br>
+Example of a modern cartoon. The text was excerpted by cartoonist Greg Williams from the Wikipedia article on Dr. Seuss
+A cartoon is a type of illustration, possibly animated, typically in a non-realistic or semi-realistic style. The specific meaning has evolved over time, but the modern usage usually refers to either: an image or series of images intended for satire, caricature, or humor; or a motion picture that relies on a sequence of illustrations for its animation. Someone who creates cartoons in the first sense is called a cartoonist,[1] and in the second sense they are usually called an animator.
+
+
+</div>
+</section>
+<section class="portfolio" id="portfolio">
+	<h3>My work</h3>
+	<div class="portfolio-row">
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/book cover.jpg">
+			<h4> Adobe Indesign</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/Akothe rihannah.jpg">
+			<h4> Adobe photoshop</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/ongoroh cate closeup copy.jpg">
+			<h4> Adobe photoshop</h4>
+			
+		</div>
+		
+	</div>
+	<div class="portfolio-row">
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/bronchure.jpg">
+			<h4> Adobe indesign</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/don-2.jpg">
+			<h4> Adobe Illustrator</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/draw.jpg">
+			<h4> Adobe illustrator</h4>
+			
+		</div>
+		
+	</div>
+	<div class="portfolio-row">
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/dresses-6.jpg">
+			<h4> Adobe Indesign</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/gym-7.jpg">
+			<h4> Adobe Indesign</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/Hair.jpg">
+			<h4> Adobe Indesign</h4>
+			
+		</div>
+		
+	</div>
+	<div class="portfolio-row">
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/Handbag-1.jpg">
+			<h4> Adobe Indesign</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/HOUSEHOLDS3.jpg">
+			<h4> Adobe Indesign</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/mi.jpg">
+			<h4> Adobe Indesign</h4>
+			
+		</div>
+		
+	</div>
+	<div class="portfolio-row">
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/ONGORO NEWSPAPER2.jpg">
+			<h4> Adobe Indesign</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/ONGORO NEWSPAPER3.jpg">
+			<h4> Adobe Indesign</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/ongoroh adell-1.jpg">
+			<h4> Adobe Illustrator</h4>
+			
+		</div>
+		
+	</div>
+	<div class="portfolio-row">
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/ongoroh akoth.jpg">
+			<h4> Adobe Illustrator</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/ongoroh duck-4.jpg">
+			<h4> Adobe illustrator</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/ongoroh face-5.jpg">
+			<h4> Adobe illustrator</h4>
+			
+		</div>
+		
+	</div>
+	<div class="portfolio-row">
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/ongoroh fruitbasket.jpg">
+			<h4> Adobe photoshop</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/ongoroh magazine design.jpg">
+			<h4> Adobe Indesign</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/ongoroh pentool work.jpg">
+			<h4> Adobe Illustrator</h4>
+			
+		</div>
+		
+	</div>
+	<div class="portfolio-row">
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/ongoroh rabbit1..jpg">
+			<h4> Adobe Illustrator</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/ongoroh-22.jpg">
+			<h4> Adobe Indesign</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/packaging.jpg">
+			<h4> Adobe Indesign</h4>
+			
+		</div>
+		
+	</div>
+	<div class="portfolio-row">
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/shoes -8.jpg">
+			<h4> Adobe Indesign</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/poster.jpg">
+			<h4> Adobe Indesign</h4>
+			
+		</div>
+		<div class="portfolio-item"><br><br><br>
+			<img src="image/logs.png">
+			<h4> Adobe illustrator</h4>
+			
+		</div>
+		
+	</div>
+</section>
+<section class="contact" id="contact">
+<h3>contact me</h3>
+		<div class="contact-row">
+			<div class="contact-map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7931768000913!2d36.78860221399644!3d-1.2988610990526461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f109997354b97%3A0xe54a131abd8ebdb2!2sAkirachix!5e0!3m2!1sen!2ske!4v1539953761102" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+				
+			</div>
+			<div class="contact-form">
+				<form action="/action_page.php">
+			<table>
+				<tr>
+					<td>contact me</td>
+				</tr>
+				<tr>
+					<td><input type="text" placeholder="Enter Your Name"></td>
+				</tr>
+				<tr>
+					<td><input type="text" placeholder="Enter Your mail Id"></td>
+				</tr>
+				<tr>
+					<td><textarea placeholder="Enter Your Message"></textarea></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Submit"></td>
+				</tr>
+			</table>
+		    </form>
+			</div>
+		</div>	
+</section>
+
+<footer>
+	<h1>Reach me through:</h1>
+	<a target="_blank" href="https://www.facebook.com/eva.akoth.52"><i class="fa fa-3x fa-facebook-square"></i></a>
+  <a target="_blank" href="https://twitter.com/akoth_evelyne"><i class="fa fa-3x fa-twitter-square"style="margin-left: 60px;"></i></a>
+  <a target="_blank" href="https://github.com/EVERLYNE"><i class="fa fa-3x fa-github-square" style="margin-left: 70px;"></i></a>
+
+<div class="button">
+	 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	</div>
+	<script>// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
+			
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 50) {
+					document.getElementById("myBtn").style.display = "block";
+				} else {
+					document.getElementById("myBtn").style.display = "none";
+				}
+			}
+			
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+				document.body.scrollTop = 0; // For Safari
+				document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+			}
+
+	</script>
+</footer>
+</body>
+</html>
